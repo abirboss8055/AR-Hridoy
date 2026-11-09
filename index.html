@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR HRIDOY — Content Creator Mentor | Guiding Potential into Purpose</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Fixed Background Scroll Canvas -->
+  <canvas id="canvas"></canvas>
+
+  <!-- Ambient Glow Elements Matching Background -->
+  <div class="ambient-glow glow-top"></div>
+  <div class="ambient-glow glow-bottom"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="header">
+    <div class="header-inner">
+      <a href="https://arhridoy.com" class="brand-logo" aria-label="AR HRIDOY Home">
+        <span class="logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </span>
+        <span class="logo-text">AR <span class="logo-highlight">HRIDOY</span></span>
+      </a>
+
+      <!-- Menu Pill -->
+      <nav class="nav-pill">
+        <!-- Home (Icon Only, link to https://arhridoy.com) -->
+        <a href="https://arhridoy.com" class="nav-link nav-home-icon" target="_blank" rel="noopener noreferrer" title="Home">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- CTA Button: Let's Talk -> WhatsApp -->
+      <a href="https://wa.me/8801956303190?text=Hi%20AR%20HRIDOY%2C%20I%20would%20like%20to%20talk%20with%20you%20regarding%20content%20creation%20and%20mentorship." target="_blank" rel="noopener noreferrer" class="btn-talk" aria-label="Let's Talk on WhatsApp">
+        <span>Let's Talk</span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="7" y1="17" x2="17" y2="7"></line>
+          <polyline points="7 7 17 7 17 17"></polyline>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content Overlay -->
+  <main class="page-content">
+
+    <!-- HERO SECTION -->
+    <section class="section hero-section" id="home">
+      <div class="hero-container">
+        
+        <!-- Left Column: Intro -->
+        <div class="hero-left">
+          <div class="status-badge anim-pop">
+            <span class="status-pulse"></span>
+            <span class="status-text">AVAILABLE FOR MENTORSHIP</span>
+          </div>
+
+          <h1 class="hero-title anim-title">
+            Hi, I'm <br>
+            <span class="hero-name">AR HRIDOY</span><span class="typing-cursor">|</span>
+          </h1>
+
+          <div class="hero-role-wrapper anim-role">
+            <h2 class="hero-role">Content Creator Mentor</h2>
+            <div class="hero-slogan">Guiding Potential into Purpose.</div>
+          </div>
+
+          <p class="hero-desc anim-desc">
+            I help aspiring creators turn their passion into a sustainable career. Master high-retention video storytelling, algorithmic audience growth, and full-time monetization.
+          </p>
+
+          <div class="hero-actions anim-actions">
+            <a href="https://arhridoy.com/product-category/all-courses" target="_blank" rel="noopener noreferrer" class="btn-primary glow-button">
+              <span>View My Work</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+            <a href="#about" class="btn-secondary">
+              <span>Download CV</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+
+          <div class="scroll-indicator anim-scroll">
+            <div class="mouse-icon">
+              <span class="mouse-wheel"></span>
+            </div>
+            <span class="scroll-text">SCROLL DOWN</span>
+          </div>
+        </div>
+
+        <!-- Center Area is kept clear so the 3D scroll canvas is visible! -->
+
+        <!-- Right Column: Stats & Socials Card -->
+        <div class="hero-right">
+          <div class="glass-card stats-card anim-stats">
+            <div class="stat-item">
+              <div class="stat-icon-wrap icon-pulse-1">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <div class="stat-info">
+                <span class="stat-number"><span class="counter" data-target="5">5</span>+</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+            </div>
+
+            <div class="stat-item">
+              <div class="stat-icon-wrap icon-pulse-2">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div class="stat-info">
+                <span class="stat-number"><span class="counter" data-target="250">250</span>+</span>
+                <span class="stat-label">Creators Mentored</span>
+              </div>
+            </div>
+
+            <div class="stat-item">
+              <div class="stat-icon-wrap icon-pulse-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </div>
+              <div class="stat-info">
+                <span class="stat-number"><span class="counter" data-target="15">15</span>M+</span>
+                <span class="stat-label">Audience Reached</span>
+              </div>
+            </div>
+
+            <div class="stat-item">
+              <div class="stat-icon-wrap icon-pulse-4">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div class="stat-info">
+                <span class="stat-number"><span class="counter" data-target="100">100</span>%</span>
+                <span class="stat-label">Success Rate</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Icons Dock: YouTube, Facebook, Telegram, Twitter/X -->
+          <div class="social-dock anim-dock">
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-btn yt" aria-label="YouTube" title="YouTube">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn fb" aria-label="Facebook" title="Facebook">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+
+            <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="social-btn tg" aria-label="Telegram" title="Telegram">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.832.942z"/>
+              </svg>
+            </a>
+
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-btn x-tw" aria-label="Twitter / X" title="Twitter / X">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="section-container">
+        <div class="section-badge">
+          <span class="badge-dot"></span>
+          <span>ABOUT MENTOR</span>
+        </div>
+
+        <div class="section-header-row">
+          <h2 class="section-title">Guiding Potential into Purpose</h2>
+          <span class="section-subtitle">Bridging the gap between raw talent and viral impact</span>
+        </div>
+
+        <div class="about-grid">
+          <div class="glass-card about-card-main tilt-card">
+            <div class="about-quote-mark">“</div>
+            <h3 class="about-headline">Every Creator Has A Story — Most Just Lack The Blueprint.</h3>
+            <p class="about-text">
+              Over the past 5+ years, I have dedicated myself to analyzing YouTube algorithms, retention patterns, video psychology, and sustainable creator monetization. As a dedicated mentor, my purpose is to guide ambitious creators from feeling overwhelmed by metrics to building a loyal audience and a thriving creative career.
+            </p>
+            <div class="about-pillars">
+              <div class="pillar-tag">
+                <span class="pillar-bullet"></span>
+                <span>Story & Hook Psychology</span>
+              </div>
+              <div class="pillar-tag">
+                <span class="pillar-bullet"></span>
+                <span>Audience Funnels & Retention</span>
+              </div>
+              <div class="pillar-tag">
+                <span class="pillar-bullet"></span>
+                <span>Monetization & Sponsorships</span>
+              </div>
+              <div class="pillar-tag">
+                <span class="pillar-bullet"></span>
+                <span>Sustainable Workflow Mastery</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card about-card-side tilt-card">
+            <h4 class="card-side-title">My Mentorship Philosophy</h4>
+            <div class="philosophy-list">
+              <div class="phil-item">
+                <span class="phil-num">01</span>
+                <div>
+                  <strong>Authentic Authority</strong>
+                  <p>Don't copy trends blindly. Build a distinct personal brand people trust.</p>
+                </div>
+              </div>
+              <div class="phil-item">
+                <span class="phil-num">02</span>
+                <div>
+                  <strong>Data-Informed Art</strong>
+                  <p>Combine cinematic storytelling with click-through rate and retention data.</p>
+                </div>
+              </div>
+              <div class="phil-item">
+                <span class="phil-num">03</span>
+                <div>
+                  <strong>Career Longevity</strong>
+                  <p>Diversify beyond ad revenue into high-ticket digital products & brand equity.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS & EXPERTISE SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="section-container">
+        <div class="section-badge">
+          <span class="badge-dot"></span>
+          <span>MY EXPERTISE</span>
+        </div>
+
+        <div class="section-header-row">
+          <h2 class="section-title">Skills & Creator Mastery</h2>
+          <a href="#services" class="section-link">
+            <span>View All Skills</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill 1 -->
+          <div class="glass-card skill-card tilt-card">
+            <div class="skill-top">
+              <div class="skill-icon-box cyan-glow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+                  <path d="M12 2a10 10 0 0 1 10 10"></path>
+                  <circle cx="12" cy="12" r="6"></circle>
+                </svg>
+              </div>
+              <div class="skill-level-wrap">
+                <span class="skill-level">Advanced</span>
+                <span class="skill-pct">95%</span>
+              </div>
+            </div>
+            <h3 class="skill-name">Content Strategy & Ideation</h3>
+            <p class="skill-sub">Viral hook frameworks & content calendars</p>
+            <div class="progress-track">
+              <div class="progress-fill" data-progress="95" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <!-- Skill 2 -->
+          <div class="glass-card skill-card tilt-card">
+            <div class="skill-top">
+              <div class="skill-icon-box purple-glow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                  <line x1="7" y1="2" x2="7" y2="22"></line>
+                  <line x1="17" y1="2" x2="17" y2="22"></line>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                </svg>
+              </div>
+              <div class="skill-level-wrap">
+                <span class="skill-level">Advanced</span>
+                <span class="skill-pct">92%</span>
+              </div>
+            </div>
+            <h3 class="skill-name">Video Storytelling & Editing</h3>
+            <p class="skill-sub">Pacing, sound design & retention architecture</p>
+            <div class="progress-track">
+              <div class="progress-fill" data-progress="92" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <!-- Skill 3 -->
+          <div class="glass-card skill-card tilt-card">
+            <div class="skill-top">
+              <div class="skill-icon-box blue-glow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <div class="skill-level-wrap">
+                <span class="skill-level">Advanced</span>
+                <span class="skill-pct">94%</span>
+              </div>
+            </div>
+            <h3 class="skill-name">Algorithm & SEO Optimization</h3>
+            <p class="skill-sub">CTR engineering, title/thumbnail psychology</p>
+            <div class="progress-track">
+              <div class="progress-fill" data-progress="94" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <!-- Skill 4 -->
+          <div class="glass-card skill-card tilt-card">
+            <div class="skill-top">
+              <div class="skill-icon-box rose-glow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <div class="skill-level-wrap">
+                <span class="skill-level">Advanced</span>
+                <span class="skill-pct">90%</span>
+              </div>
+            </div>
+            <h3 class="skill-name">Personal Branding & Positioning</h3>
+            <p class="skill-sub">Category design & niche authority building</p>
+            <div class="progress-track">
+              <div class="progress-fill" data-progress="90" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <!-- Skill 5 -->
+          <div class="glass-card skill-card tilt-card">
+            <div class="skill-top">
+              <div class="skill-icon-box emerald-glow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <div class="skill-level-wrap">
+                <span class="skill-level">Advanced</span>
+                <span class="skill-pct">88%</span>
+              </div>
+            </div>
+            <h3 class="skill-name">Monetization & Brand Deals</h3>
+            <p class="skill-sub">Sponsorship kits, digital products & cohorts</p>
+            <div class="progress-track">
+              <div class="progress-fill" data-progress="88" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <!-- Skill 6 -->
+          <div class="glass-card skill-card tilt-card">
+            <div class="skill-top">
+              <div class="skill-icon-box amber-glow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div class="skill-level-wrap">
+                <span class="skill-level">Intermediate</span>
+                <span class="skill-pct">82%</span>
+              </div>
+            </div>
+            <h3 class="skill-name">Community & Cohort Building</h3>
+            <p class="skill-sub">Discord/Telegram creator masterminds</p>
+            <div class="progress-track">
+              <div class="progress-fill" data-progress="82" style="width: 0%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED PROJECTS / CASE STUDIES SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="section-container">
+        <div class="section-badge">
+          <span class="badge-dot"></span>
+          <span>FEATURED WORK</span>
+        </div>
+
+        <div class="section-header-row">
+          <h2 class="section-title">Selected Projects</h2>
+          <a href="#contact" class="section-link">
+            <span>View All Projects</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="glass-card project-card tilt-card">
+            <div class="project-thumb thumb-analytics">
+              <div class="thumb-overlay">
+                <div class="thumb-metric">0 → 100K</div>
+                <div class="thumb-metric-label">Subscribers in 8 Months</div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Creator Blueprint Cohort</h3>
+              <p class="project-desc">Complete growth roadmap taking 18 beginner creators from zero to consistent five-figure views and monetization.</p>
+              <div class="project-tags">
+                <span class="tag">YouTube</span>
+                <span class="tag">Strategy</span>
+                <span class="tag">Analytics</span>
+              </div>
+              <a href="#contact" class="project-link" aria-label="View Project">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="glass-card project-card tilt-card">
+            <div class="project-thumb thumb-saas">
+              <div class="thumb-overlay">
+                <div class="thumb-metric">50M+</div>
+                <div class="thumb-metric-label">Short-Form Organic Views</div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Viral Short-Form Engine</h3>
+              <p class="project-desc">High-retention Reels, TikToks & Shorts formula engineered for high retention and seamless funnel conversions.</p>
+              <div class="project-tags">
+                <span class="tag">Shorts</span>
+                <span class="tag">Reels</span>
+                <span class="tag">Viral Hooks</span>
+              </div>
+              <a href="#contact" class="project-link" aria-label="View Project">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="glass-card project-card tilt-card">
+            <div class="project-thumb thumb-ecom">
+              <div class="thumb-overlay">
+                <div class="thumb-metric">$180K+</div>
+                <div class="thumb-metric-label">Brand Sponsorships Secured</div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Brand & Sponsorship Media Kit</h3>
+              <p class="project-desc">Pitching deck, rate cards, and negotiation scripts that doubled creator brand deal revenue per integration.</p>
+              <div class="project-tags">
+                <span class="tag">Sponsorship</span>
+                <span class="tag">Media Kit</span>
+                <span class="tag">Deals</span>
+              </div>
+              <a href="#contact" class="project-link" aria-label="View Project">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="glass-card project-card tilt-card">
+            <div class="project-thumb thumb-ai">
+              <div class="thumb-overlay">
+                <div class="thumb-metric">1,200+</div>
+                <div class="thumb-metric-label">Active Mastermind Members</div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Creator Mastermind Network</h3>
+              <p class="project-desc">Private mentorship community featuring weekly video reviews, collaborative projects, and guest industry speakers.</p>
+              <div class="project-tags">
+                <span class="tag">Community</span>
+                <span class="tag">Coaching</span>
+                <span class="tag">Mastermind</span>
+              </div>
+              <a href="#contact" class="project-link" aria-label="View Project">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="section services-section" id="services">
+      <div class="section-container">
+        <div class="section-badge">
+          <span class="badge-dot"></span>
+          <span>WHAT I OFFER</span>
+        </div>
+
+        <div class="section-header-row">
+          <h2 class="section-title">Mentorship & Services</h2>
+          <span class="section-subtitle">Tailored programs designed to accelerate your creator career</span>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1: Apply For VIP -> WhatsApp -->
+          <div class="glass-card service-card tilt-card">
+            <div class="service-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <h3 class="service-title">1-on-1 VIP Mentorship</h3>
+            <p class="service-desc">Dedicated weekly strategy sessions, private direct chat access, custom feedback on every video script, cut, and thumbnail before you publish.</p>
+            <ul class="service-features">
+              <li>Direct 1-on-1 weekly video calls</li>
+              <li>Script & edit teardown reviews</li>
+              <li>Priority Telegram/WhatsApp access</li>
+            </ul>
+            <a href="https://wa.me/8801956303190?text=Hi%20AR%20HRIDOY%2C%20I%20want%20to%20apply%20for%20your%201-on-1%20VIP%20Mentorship%20program." target="_blank" rel="noopener noreferrer" class="service-btn" aria-label="Apply For VIP on WhatsApp">Apply For VIP ↗</a>
+          </div>
+
+          <!-- Service 2: Join Next Batch -> WhatsApp -->
+          <div class="glass-card service-card featured-service tilt-card">
+            <div class="service-badge-pill">MOST POPULAR</div>
+            <div class="service-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="service-title">Creator Accelerator Cohort</h3>
+            <p class="service-desc">An 8-week intensive group program covering idea validation, packaging, retention editing, algorithm hacking, and monetization blueprints.</p>
+            <ul class="service-features">
+              <li>8 comprehensive training modules</li>
+              <li>Live weekly Q&A workshops</li>
+              <li>Lifetime community network access</li>
+            </ul>
+            <a href="https://wa.me/8801956303190?text=Hi%20AR%20HRIDOY%2C%20I%20would%20like%20to%20join%20the%20next%20batch%20of%20the%20Creator%20Accelerator%20Cohort." target="_blank" rel="noopener noreferrer" class="service-btn highlight-btn" aria-label="Join Next Batch on WhatsApp">Join Next Batch ↗</a>
+          </div>
+
+          <!-- Service 3: Book Audit -> WhatsApp -->
+          <div class="glass-card service-card tilt-card">
+            <div class="service-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <h3 class="service-title">Channel & Content Audit</h3>
+            <p class="service-desc">A deep-dive analytical diagnosis of your existing channel, identifying audience drop-off points, thumbnail friction, and high-impact low-effort fixes.</p>
+            <ul class="service-features">
+              <li>In-depth 45-min video teardown</li>
+              <li>Actionable 10-point improvement plan</li>
+              <li>Thumbnail & Title redesign brief</li>
+            </ul>
+            <a href="https://wa.me/8801956303190?text=Hi%20AR%20HRIDOY%2C%20I%20would%20like%20to%20book%20a%20Channel%20%26%20Content%20Audit." target="_blank" rel="noopener noreferrer" class="service-btn" aria-label="Book Audit on WhatsApp">Book Audit ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="section process-section" id="process">
+      <div class="section-container">
+        <div class="section-badge">
+          <span class="badge-dot"></span>
+          <span>HOW IT WORKS</span>
+        </div>
+
+        <div class="section-header-row">
+          <h2 class="section-title">The Mentorship Process</h2>
+          <span class="section-subtitle">A proven 4-stage roadmap transforming creators into market leaders</span>
+        </div>
+
+        <div class="process-timeline">
+          <!-- Step 1 -->
+          <div class="glass-card process-card tilt-card">
+            <div class="process-number">01</div>
+            <h3 class="process-step-title">Audit & Foundation</h3>
+            <p class="process-step-desc">We analyze your niche, competitor landscape, current retention metrics, and define your unique positioning and creator voice.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="glass-card process-card tilt-card">
+            <div class="process-number">02</div>
+            <h3 class="process-step-title">Packaging & Strategy</h3>
+            <p class="process-step-desc">Develop viral hook models, title & thumbnail formulas, and structured script outlines designed to hook viewers in the first 5 seconds.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="glass-card process-card tilt-card">
+            <div class="process-number">03</div>
+            <h3 class="process-step-title">Production Mastery</h3>
+            <p class="process-step-desc">Refine visual pacing, B-roll rhythm, audio clarity, and high-retention editing techniques that maximize viewer session time.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="glass-card process-card tilt-card">
+            <div class="process-number">04</div>
+            <h3 class="process-step-title">Monetize & Scale</h3>
+            <p class="process-step-desc">Set up inbound brand sponsorship channels, digital products, and community monetization to turn views into recurring monthly income.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / CTA BANNER SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="section-container">
+        
+        <!-- Wide Banner: Get In Touch -> WhatsApp -->
+        <div class="glass-card cta-banner glow-banner tilt-card">
+          <div class="cta-banner-left">
+            <div class="cta-banner-sub">Let's build something</div>
+            <h2 class="cta-banner-title">Amazing together 👋</h2>
+          </div>
+          <div class="cta-banner-center">
+            <p>I'm always open to discussing new mentorship opportunities, channel growth strategies, and creative collaborations.</p>
+          </div>
+          <div class="cta-banner-right">
+            <a href="https://wa.me/8801956303190?text=Hi%20AR%20HRIDOY%2C%20I%20got%20in%20touch%20through%20your%20website%20and%20want%20to%20discuss%20mentorship%20and%20collaboration." target="_blank" rel="noopener noreferrer" class="btn-primary cta-btn glow-button" aria-label="Get In Touch on WhatsApp">
+              <span>Get In Touch</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER: ONLY COPYRIGHT TEXT AS REQUESTED -->
+  <footer class="site-footer">
+    <div class="footer-inner footer-center">
+      <div class="footer-copyright">
+        © 2026 AR HRIDOY. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="lenis.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
