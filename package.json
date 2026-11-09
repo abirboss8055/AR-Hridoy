@@ -1,0 +1,11 @@
+{
+  "name": "ar-hridoy-portfolio",
+  "version": "1.0.0",
+  "description": "AR HRIDOY — Content Creator Mentor Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "AR HRIDOY",
+  "license": "ISC"
+}
